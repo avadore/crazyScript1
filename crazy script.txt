@@ -1,0 +1,193 @@
+<!doctype html> 
+<html> 
+<head> 
+	<script> 
+	var a = 0; 
+	var b = 0; 
+	var c = 0; 
+	function changeBackground() { 
+		var x = document.getElementById('bg'); 
+		bg.style.backgroundColor = 'rgb('+a+', '+b+', '+c+')'; 
+		a += 1; 
+		b += a + 1; 
+		c += b + 1; 
+		if (a > 255) a = a - b; 
+		if (b > 255) b = a; 
+		if (c > 255) c = b; 
+	} 
+	</script> 
+</head> 
+<body> 
+	<input id="bg" onkeyup="changeBackground()"
+	placeholder="write something" style="color:#fff"> 
+</body> 
+</html> 
+
+.................................................................................
+
+
+3) onmouseover event: This event corresponds to hovering the mouse pointer over the element and its children, to which it is bound to.
+Code #3:
+
+brightness_4
+<!doctype html> 
+<html> 
+  <head> 
+    <script> 
+       function hov() { 
+         var e = document.getElementById('hover'); 
+         e.style.display = 'none'; 
+      } 
+    </script> 
+  </head> 
+  <body> 
+    <div id="hover" onmouseover="hov()"
+      style="background-color:green;height:200px;width:200px;"> 
+    </div> 
+  </body> 
+</html> 
+
+...............................................................................
+4) onmouseout event: Whenever the mouse cursor leaves the element which handles a mouseout event, a function associated with it is executed.
+Code #4:
+
+filter_none
+edit
+play_arrow
+
+brightness_5
+<!doctype html> 
+<html> 
+  <head> 
+    <script> 
+      function out() { 
+        var e = document.getElementById('hover'); 
+        e.style.display = 'none'; 
+      } 
+    </script> 
+  </head> 
+  <body> 
+    <div id="hover" onmouseout="out()" 
+      style="background-color:green;height:200px;width:200px;"> 
+    </div> 
+  </body> 
+</html> 
+.........................................................................
+5) onchange event: This event detects the change in value of any element listing to this event.
+Code #5:
+
+filter_none
+edit
+play_arrow
+
+brightness_5
+<!doctype html> 
+<html> 
+  <head></head> 
+  <body> 
+    <input onchange="alert(this.value)" type="number"> 
+  </body> 
+</html> 
+
+..........................................................................................
+https://www.quackit.com/javascript/javascript_redirect.cfm
+https://love2dev.com/blog/ways-to-use-javascript-redirect-to-another-page/
+..................................................................................
+Below code takes an input url from the user and the url is stored in a variable through getElementById() and window.location takes the page to that url.
+
+filter_none
+brightness_5
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Redirect url in Javascript</title> 
+</head> 
+<body> 
+<input id = "url" type = "text" name = "url" 
+                        placeholder = "Enter a url here"> 
+<input type = "submit" name = "button" onclick = "fun()"> 
+<script> 
+function fun() { 
+    var url= document.getElementById("url").value; 
+    document.write("Redirecting to the url in 3 seconds..."); 
+    setTimeout(function(){window.location = url;}, 3000); 
+} 
+</script> 
+</body> 
+</html> 
+\..............................................................................
+
+<!doctype html>
+<html>
+<head>
+<script>
+function alertmsg()
+{
+a=prompt("Enter your name:");
+alert(a);
+}
+</script>
+</head>
+<form>
+<input type="button" value="Click Me" onclick="alertmsg()"/>
+</form>
+</html>
+..................................................................................
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Confirmation Dialog Box</title>
+ 
+      <script type="text/javascript">
+ 
+         function testConfirmDialog()  {
+ 
+              var result = confirm("Do you want to continue?");
+ 
+              if(result)  {
+                  alert("OK Next lesson!");
+              } else {
+                  alert("Bye!");
+              }
+         }
+ 
+      </script>
+ 
+   </head>
+   <body>
+      <h2>Confirmation Dialog Box</h2>
+ 
+ 
+      <button onclick="testConfirmDialog()">Click me!</button>
+ 
+   </body>
+</html>
+...................................................................................
+
+CRAZY SCRIPTS
+
+.....................................................................................
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+    var google= function google() {
+        window.location.href = "https://www.google.com"
+    }
+    var crazy = function crazy() {
+       var theo = prompt("Enter URL:");
+       return theo;
+    }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <p><strong> Welcome to crazy script.</strong> <span><button onclick="google()">google</button></span></p>
+    <p>Crazy script is not for young men</p>
+    <input type="button" value="crazy redirector" onclick="window.location.assign(crazy())">  
+</body>
+</html>

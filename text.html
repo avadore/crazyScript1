@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+    var google= function google() {
+        window.location.href = "https://www.google.com"
+    }
+    var crazy = function crazy() {
+       var theo = prompt("Enter URL:");
+       return "https://"+theo;
+    }
+     function dami(){
+        swal("CrazyScript", "Hello world!", "warning");
+     }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    Z
+    <p><strong> Welcome to crazy script.</strong> <span><button onclick="google()">google</button></span></p>
+    <p>Crazy script is not for young men</p>
+    <input type="button" value="crazy redirector" onclick="window.location.assign(crazy())">  
+    <input type="button" value="crazy swaling" onclick="dami()">  
+</body>
+</html>
